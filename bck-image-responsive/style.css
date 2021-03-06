@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+/* 
+    Calculating the percentage of the Aspect ratio
+    So here the image used has the height = 4000px , width = 6000px
+    So the Aspect ratio is 4000/6000 = 0.66 => 66%
+
+*/
+.bg-image {
+  background: url("ariel_-aguerophoto-8KlxmuOqkks-unsplash.jpg") no-repeat
+    center;
+  background-size: contain;
+  width: 100%;
+  /* Cannot provide the height in percentage because the parent element doesnt have any height */
+  /* height: 66%; */
+
+  /* Trying with height = 960 * 0.66 = 633px
+    Even this won't work with BG-Size : Contain because,the height is fixed when the screen is resized
+  */
+
+  /* SOLUTION!!!!! : Since padding is calucalated based on the parent's height
+    padding top or bottom can be used to set the height(Because of the padding's box model)
+  */
+  padding-top: 66%;
+}
