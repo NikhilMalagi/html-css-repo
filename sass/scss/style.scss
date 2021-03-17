@@ -1,5 +1,4 @@
-$light-color: #f4f4f4;
-$my-font: Arial, Helvetica, sans-serif;
+@import "config";
 
 * {
   box-sizing: border-box;
@@ -12,3 +11,54 @@ body {
   font: $my-font;
   line-height: 1.6;
 }
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.showcase {
+  @include set-background($primary-color);
+  height: 600px;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 15px;
+    }
+
+    a:hover {
+      color: orange;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    display: center;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+@import "utilities";
+@import "buttons";
+@import "mobile";
