@@ -1,0 +1,23 @@
+{
+  "name": "html-css-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikhilMalagi/html-css-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikhilMalagi/html-css-repo/issues"
+  },
+  "homepage": "https://github.com/NikhilMalagi/html-css-repo#readme",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "simple-git": "^2.37.0"
+  }
+}
