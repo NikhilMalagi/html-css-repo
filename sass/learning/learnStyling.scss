@@ -1,0 +1,48 @@
+@import "./partial";
+
+$primary-color: #272727;
+$secondary-color: #ff6457;
+$text-color: #fff;
+
+$font-weights: (
+  "regular": 600,
+  "medium": 400,
+  "bold": 200,
+);
+
+@function weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+@mixin theme($light: false) {
+  @if ($light) {
+    background: white;
+    color: black;
+    font-weight: weight(bold);
+    font-size: $bodyContent;
+  } @else {
+    background: $primary-color;
+    color: $text-color;
+    font-weight: weight(bold);
+    font-size: $bodyContent;
+  }
+}
+
+body {
+  @include theme(false);
+}
+
+.showcase {
+  background: lightblue;
+
+  & > .container {
+    background: lightcoral;
+    display: flex;
+    justify-content: center;
+  }
+
+  .showcase-content {
+    @extend .container;
+    background: lightgreen;
+  }
+}
